@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExecutorX</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .logo-container {
+            margin-bottom: 20px;
+            width: 200px;
+            height: 200px;
+            border: 2px dashed #555555;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1em;
+            color: #999999;
+            object-fit: contain;
+        }
+        .logo-container img {
+            max-width: 100%;
+            max-height: 100%;
+            border: none;
+            object-fit: contain;
+        }
+        h1 {
+            color: #ff6b6b;
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+        .button {
+            background-color: #333333;
+            border: 1px solid #555555;
+            border-radius: 5px;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            color: #ffffff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #555555;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+        }
+        .modal-content {
+            background-color: #1a1a1a;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #333333;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+            color: #ffffff;
+        }
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover {
+            color: #ffffff;
+        }
+        .roblox-button {
+            background-color: #00a2ff;
+            margin-top: 15px;
+        }
+        .roblox-button:hover {
+            background-color: #0088cc;
+        }
+        footer {
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #999999;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <img src="imagen.png" alt="Logo ExecutorX">
+    </div>
+    <h1>ExecutorX</h1>
+    <p>La herramienta más avanzada para potenciar tu experiencia en Roblox. Obtén acceso rápido, seguro y optimizado.</p>
+    <button class="button" onclick="openModal()">Obtener prueba gratis</button>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Prueba activada</h2>
+            <p>¡Listo! Se ha activado una prueba por 3 días.</p>
+            <p>Ahora obtén el script:</p>
+            <a href="https://www.roblox.com/share?code=7eaa98de81a5d44388e6da0a59c5f6cb&type=Server" target="_blank">
+                <button class="button roblox-button">Ir a Roblox</button>
+            </a>
+            <br>
+            <button class="button" onclick="closeModal()" style="margin-top: 10px; background-color: #ff6b6b;">Cerrar</button>
+        </div>
+    </div>
+
+    <footer>© 2025 ExecutorX</footer>
+
+    <script>
+        function openModal() {
+            document.getElementById("myModal").style.display = "block";
+        }
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+        window.onclick = function(event) {
+            var modal = document.getElementById("myModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
